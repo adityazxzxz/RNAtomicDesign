@@ -20,7 +20,7 @@ const QRInput = ({ route, navigation }) => {
                     <FormControl.Label>INPUT NOMINAL</FormControl.Label>
                     <InputNumber value={nominal} onChange={handleInputChange} />
                 </FormControl>
-                <Button mt="2" colorScheme="indigo" onPress={() => alert(nominal)}>
+                <Button mt="2" colorScheme="indigo" onPress={() => navigation.navigate('PIN')}>
                     Submit
                 </Button>
             </Box>

@@ -12,6 +12,8 @@ const InputNumber = ({ value, onChange }) => {
             renderText={(formattedValue) => (
                 <Input
                     value={formattedValue}
+                    fontSize={[24, 47, 60]}
+                    textAlign="center"
                     onChangeText={(text) => {
                         // Hilangkan titik ketika input berubah
                         const rawValue = text.replace(/\./g, '');

@@ -8,6 +8,7 @@ import { store } from './src/redux/store'
 import Onboard from "./src/screens/onboard/Onboard";
 import Home from "./src/screens/Home";
 import QRInput from "./src/screens/QRInput";
+import PIN from "./src/screens/PIN";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
             <Stack.Screen name="Onboard" component={Onboard} options={{ headerShown: false }} />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="QRInput" component={QRInput} options={{ headerShown: false }} />
+            <Stack.Screen name="PIN" component={PIN} options={{ headerShown: false }} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>
