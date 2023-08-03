@@ -1,4 +1,5 @@
-import { Animated, Image, SafeAreaView, Text, View } from 'react-native';
+import { Animated, Image, SafeAreaView, Text, View, Touchable } from 'react-native';
+import { Button } from 'native-base'
 import React, { useState } from 'react';
 
 import {
@@ -40,7 +41,7 @@ const animateCell = ({ hasValue, index, isFocused }) => {
     ]).start();
 };
 
-const PIN = () => {
+const PIN = ({ navigation }) => {
     const [value, setValue] = useState('');
     const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
     const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -110,9 +111,12 @@ const PIN = () => {
                 textContentType="oneTimeCode"
                 renderCell={renderCell}
             />
-            <View style={styles.nextButton}>
+            {/* <View style={styles.nextButton}>
                 <Text style={styles.nextButtonText}>Verify</Text>
-            </View>
+            </View> */}
+            <Button mt="10" colorScheme="indigo" onPress={() => navigation.navigate('QRSuccess')}>
+                Verify
+            </Button>
         </SafeAreaView>
     );
 };

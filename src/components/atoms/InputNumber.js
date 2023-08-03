@@ -9,6 +9,7 @@ const InputNumber = ({ value, onChange }) => {
             displayType={'text'}
             thousandSeparator={'.'}
             decimalSeparator={','}
+            prefix='Rp'
             renderText={(formattedValue) => (
                 <Input
                     value={formattedValue}
