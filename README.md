@@ -96,10 +96,11 @@ defaultConfig {
 ```bash
 # using npm
 npm i deprecated-react-native-prop-types
+```
 
 go to /node-modules/react-native-camera/src/RNCamera.js
-delete the imported ViewPropTypes from 'react-native'
 
-
-add import {ViewPropTypes} from 'deprecated-react-native-prop-types'
+```bash
+[--] import ViewPropTypes from 'react-native'
+[++] import {ViewPropTypes} from 'deprecated-react-native-prop-types'
 ```
