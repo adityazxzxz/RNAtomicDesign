@@ -80,15 +80,16 @@ To learn more about React Native, take a look at the following resources:
 
 # For react native camera
 
+update android/app/build.gradle
+
 ```bash
-defaultConfig {
-   applicationId "com.rnatomic"
-   minSdkVersion rootProject.ext.minSdkVersion
-   targetSdkVersion rootProject.ext.targetSdkVersion
-   versionCode 1
-   versionName "1.0"
-   missingDimensionStrategy 'react-native-camera', 'general' // add this line
+android {
+   defaultConfig {
+      ...
+      missingDimensionStrategy 'react-native-camera', 'general' // add this line
 }
+}
+
 ```
 
 # viewproptypes will be removed from react native
