@@ -80,18 +80,26 @@ To learn more about React Native, take a look at the following resources:
 
 # For react native camera
 
+```bash
 defaultConfig {
-applicationId "com.rnatomic"
-minSdkVersion rootProject.ext.minSdkVersion
-targetSdkVersion rootProject.ext.targetSdkVersion
-versionCode 1
-versionName "1.0"
-missingDimensionStrategy 'react-native-camera', 'general' // add this line
+   applicationId "com.rnatomic"
+   minSdkVersion rootProject.ext.minSdkVersion
+   targetSdkVersion rootProject.ext.targetSdkVersion
+   versionCode 1
+   versionName "1.0"
+   missingDimensionStrategy 'react-native-camera', 'general' // add this line
 }
+```
 
 # viewproptypes will be removed from react native
 
-run npm i deprecated-react-native-prop-types
+```bash
+# using npm
+npm i deprecated-react-native-prop-types
+
 go to /node-modules/react-native-camera/src/RNCamera.js
 delete the imported ViewPropTypes from 'react-native'
+
+
 add import {ViewPropTypes} from 'deprecated-react-native-prop-types'
+```
