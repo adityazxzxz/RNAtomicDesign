@@ -6,10 +6,8 @@ import { Provider } from "react-redux";
 import { store } from './src/redux/store'
 
 import Onboard from "./src/screens/onboard/Onboard";
-import OnboardOne from "./src/screens/onboard/OnboardOne";
-import OnboardTwo from "./src/screens/onboard/OnboardTwo";
-import OnboardThree from "./src/screens/onboard/OnboardThree";
-import Register from "./src/screens/Register";
+import Home from "./src/screens/Home";
+import QRInput from "./src/screens/QRInput";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,10 +18,8 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Onboard">
             <Stack.Screen name="Onboard" component={Onboard} options={{ headerShown: false }} />
-            <Stack.Screen name="OnboardOne" component={OnboardOne} options={{ headerShown: false }} />
-            <Stack.Screen name="OnboardTwo" component={OnboardTwo} options={{ headerShown: false }} />
-            <Stack.Screen name="OnboardThree" component={OnboardThree} options={{ headerShown: false }} />
-            <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
+            <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+            <Stack.Screen name="QRInput" component={QRInput} options={{ headerShown: false }} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>

@@ -5,7 +5,8 @@ import Onboarding from 'react-native-onboarding-swiper';
 
 const Simple = ({ navigation }) => (
     <Onboarding
-        onDone={() => navigation.navigate('Register')}
+        onDone={() => navigation.navigate('Home')}
+        onSkip={() => navigation.navigate('QRInput', { data: { "tes": "123" } })}
         pages={[
             {
                 backgroundColor: '#fff',

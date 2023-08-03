@@ -87,7 +87,7 @@ android {
    defaultConfig {
       ...
       missingDimensionStrategy 'react-native-camera', 'general' // add this line
-}
+   }
 }
 
 ```
@@ -105,3 +105,16 @@ go to /node-modules/react-native-camera/src/RNCamera.js
 [--] import ViewPropTypes from 'react-native'
 [++] import {ViewPropTypes} from 'deprecated-react-native-prop-types'
 ```
+
+# Build Testing APK
+
+```bash
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+cd android
+./gradlew assembleDebug
+```
+
+## location apk
+
+yourProject/android/app/build/outputs/apk/debug/app-debug.apk

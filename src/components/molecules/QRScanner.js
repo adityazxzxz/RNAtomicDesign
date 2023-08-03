@@ -4,7 +4,6 @@ import { StyleSheet, Linking, Text, TouchableOpacity } from 'react-native'
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
 
-
 const styles = StyleSheet.create({
     centerText: {
         flex: 1,
@@ -25,16 +24,11 @@ const styles = StyleSheet.create({
     }
 });
 
-const QRScanner = ({ navigation }) => {
-    onSuccess = e => {
-        Linking.openURL(e.data).catch(err =>
-            console.error('An error occured', err)
-        );
-    };
+const QRScanner = ({ navigation, onRead }) => {
     return (
         <QRCodeScanner
             showMarker={true}
-            onRead={this.onSuccess}
+            onRead={onRead}
             flashMode={RNCamera.Constants.FlashMode.off}
             topContent={
                 <Text style={styles.centerText}>
